@@ -1,6 +1,5 @@
-package io.percy.selenium;
+package selenium;
 
-import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -13,12 +12,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 

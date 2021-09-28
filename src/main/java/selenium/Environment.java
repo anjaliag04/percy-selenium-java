@@ -1,4 +1,4 @@
-package io.percy.selenium;
+package selenium;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.HasCapabilities;

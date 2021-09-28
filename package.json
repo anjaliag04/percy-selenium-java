@@ -4,6 +4,6 @@
     "@percy/cli": "^1.0.0-beta.68"
   },
   "scripts": {
-    "test": "npx percy exec -t 200 -- node tests/SdkTest.java"
+    "test": "npx percy exec -t 200 -- node /Users/anjialiagarwal/Downloads/percy-selenium-java/src/test/java/io.percy.selenium/SdkTest.java"
   }
 }

@@ -31,7 +31,7 @@ This is an example test using the `percy.snapshot` function.
 
 ``` java
 // import ...
-import io.percy.selenium.Percy;
+import Percy;
 
 public class Example {
   private static WebDriver driver;
