@@ -3,6 +3,7 @@ package io.percy.selenium;
 import java.io.IOException;
 import java.util.Arrays;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,6 +13,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -24,12 +27,12 @@ public class SdkTest {
   @BeforeAll
   public static void testSetup() throws IOException {
     // Disable browser logs from being logged to stdout
-    System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
-
+    //System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+    WebDriverManager.chromedriver().setup();
     TestServer.startServer();
-    FirefoxOptions options = new FirefoxOptions();
+    ChromeOptions options = new ChromeOptions();
     options.setHeadless(true);
-    driver = new FirefoxDriver(options);
+    driver = new ChromeDriver(options);
     percy = new Percy(driver);
   }
 
